@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grayson Coleman | Data Science & Healthcare</title>
+  <style>
+    /* === Custom Properties === */
+    :root {
+      --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+      --dark-bg: #0f0f23;
+      --card-bg: rgba(255, 255, 255, 0.05);
+      --glass-bg: rgba(255, 255, 255, 0.1);
+      --text-primary: #ffffff;
+      --text-secondary: #b8c6db;
+      --text-accent: #00f2fe;
+      --shadow-glow: 0 20px 40px rgba(103, 126, 234, 0.3);
+      --border-radius: 20px;
+    }
+
+    /* === Base Styles === */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--dark-bg);
+      color: var(--text-primary);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* === Animated Background === */
+    .bg-animation {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: var(--dark-bg);
+    }
+
+    .bg-animation::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: 
+        radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(120, 200, 255, 0.3) 0%, transparent 50%);
+      animation: float 20s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      33% { transform: translateY(-30px) rotate(120deg); }
+      66% { transform: translateY(30px) rotate(240deg); }
+    }
+
+    /* === Navigation === */
+    nav {
+      position: fixed;
+      top: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1000;
+      background: var(--glass-bg);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 50px;
+      padding: 0.75rem 2rem;
+      display: flex;
+      gap: 2rem;
+      transition: all 0.3s ease;
+    }
+
+    nav.scrolled {
+      background: var(--glass-bg);
+      box-shadow: var(--shadow-glow);
+    }
+
+    nav a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: var(--text-accent);
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent-gradient);
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after,
+    nav a.active::after {
+      width: 100%;
+    }
+
+    /* === Sections === */
+    section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.8s ease;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .container {
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    /* === Hero Section === */
+    #hero {
+      text-align: center;
+      position: relative;
+    }
+
+    .hero-content h1 {
+      font-size: clamp(3rem, 8vw, 6rem);
+      font-weight: 800;
+      background: var(--primary-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 1rem;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from { filter: drop-shadow(0 0 20px rgba(103, 126, 234, 0.5)); }
+      to { filter: drop-shadow(0 0 30px rgba(103, 126, 234, 0.8)); }
+    }
+
+    .hero-subtitle {
+      font-size: 1.5rem;
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+    }
+
+    #typewriter {
+      background: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: 600;
+    }
+
+    .cursor {
+      color: var(--text-accent);
+      animation: blink 1s step-end infinite;
+    }
+
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+
+    .hero-cta {
+      margin-top: 3rem;
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: var(--border-radius);
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background: var(--primary-gradient);
+      color: white;
+      box-shadow: var(--shadow-glow);
+    }
+
+    .btn-secondary {
+      background: var(--glass-bg);
+      color: var(--text-primary);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+    }
+
+    .btn:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 25px 50px rgba(103, 126, 234, 0.4);
+    }
+
+    .btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: left 0.5s;
+    }
+
+    .btn:hover::before {
+      left: 100%;
+    }
+
+    /* === Content Sections === */
+    .section-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .section-header h2 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 700;
+      background: var(--secondary-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 1rem;
+    }
+
+    .section-header p {
+      font-size: 1.2rem;
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* === About Section === */
+    .about-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .about-text {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: var(--text-secondary);
+    }
+
+    .about-visual {
+      position: relative;
+      height: 400px;
+      background: var(--glass-bg);
+      border-radius: var(--border-radius);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .about-visual::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--accent-gradient);
+      opacity: 0.1;
+      animation: pulse 3s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.1; }
+      50% { opacity: 0.3; }
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .stat-card {
+      background: var(--card-bg);
+      padding: 2rem;
+      border-radius: var(--border-radius);
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-glow);
+    }
+
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 800;
+      background: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .stat-label {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+    }
+
+    /* === Portfolio Section === */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+    }
+
+    .project-card {
+      background: var(--card-bg);
+      border-radius: var(--border-radius);
+      padding: 2rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: var(--accent-gradient);
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-glow);
+    }
+
+    .project-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 1rem;
+    }
+
+    .project-description {
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+
+    .project-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .tech-tag {
+      background: var(--glass-bg);
+      color: var(--text-accent);
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      border: 1px solid rgba(0, 242, 254, 0.3);
+    }
+
+    /* === Contact Section === */
+    .contact-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .contact-info {
+      background: var(--card-bg);
+      padding: 3rem;
+      border-radius: var(--border-radius);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      color: var(--text-secondary);
+    }
+
+    .contact-icon {
+      width: 20px;
+      height: 20px;
+      background: var(--accent-gradient);
+      border-radius: 50%;
+    }
+
+    .contact-form {
+      background: var(--card-bg);
+      padding: 3rem;
+      border-radius: var(--border-radius);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+    }
+
+    .form-group {
+      margin-bottom: 2rem;
+    }
+
+    .form-group label {
+      display: block;
+      color: var(--text-secondary);
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 1rem;
+      background: var(--glass-bg);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      color: var(--text-primary);
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: var(--text-accent);
+      box-shadow: 0 0 20px rgba(0, 242, 254, 0.3);
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: var(--text-secondary);
+    }
+
+    .form-group select option {
+      background: var(--dark-bg);
+      color: var(--text-primary);
+    }
+
+    /* === Footer === */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--text-secondary);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* === Responsive Design === */
+    @media (max-width: 768px) {
+      nav {
+        padding: 0.5rem 1rem;
+        gap: 1rem;
+      }
+
+      nav a {
+        font-size: 0.8rem;
+      }
+
+      .hero-cta {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .about-content,
+      .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bg-animation"></div>
+  
+  <!-- Navigation -->
+  <nav id="navbar">
+    <a href="#hero" class="nav-link active">Home</a>
+    <a href="#about" class="nav-link">About</a>
+    <a href="#portfolio" class="nav-link">Portfolio</a>
+    <a href="#contact" class="nav-link">Contact</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="visible">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Grayson Coleman</h1>
+        <div class="hero-subtitle">
+          I am <span id="typewriter"></span><span class="cursor">|</span>
+        </div>
+        <div class="hero-cta">
+          <a href="#portfolio" class="btn btn-primary">View My Work</a>
+          <a href="#contact" class="btn btn-secondary">Let's Connect</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <div class="section-header">
+        <h2>About Me</h2>
+        <p>Bridging the gap between cutting-edge research and compassionate healthcare</p>
+      </div>
+      <div class="about-content">
+        <div class="about-text">
+          <p>I'm a recent UNC graduate with a strong foundation in biology, data science, and patient-centered healthcare. I've supported pediatric care at UNC Children's Hospital, explored T-cell dynamics at the UNC Kidney Center, and built OpenAI-based tools to accelerate clinical trials.</p>
+          <p>My passion lies in using data and technology to improve health outcomes and advance medical innovation. I believe in the power of interdisciplinary approaches to solve complex healthcare challenges.</p>
+        </div>
+        <div class="about-visual">
+          <div style="text-align: center; z-index: 1;">
+            <div style="font-size: 4rem; margin-bottom: 1rem;">🧬</div>
+            <div style="color: var(--text-accent); font-weight: 600;">Data-Driven Healthcare</div>
+          </div>
+        </div>
+      </div>
+      <div class="stats">
+        <div class="stat-card">
+          <div class="stat-number">3+</div>
+          <div class="stat-label">Research Projects</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">500+</div>
+          <div class="stat-label">Patients Supported</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">2</div>
+          <div class="stat-label">AI Tools Built</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Dedication</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio">
+    <div class="container">
+      <div class="section-header">
+        <h2>Featured Projects</h2>
+        <p>Innovative solutions at the intersection of healthcare, data science, and technology</p>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3 class="project-title">Clinical Trial Assistant</h3>
+          <p class="project-description">NLP tool using OpenAI API to generate draft protocols, streamlining the clinical trial development process and reducing time-to-market for critical treatments.</p>
+          <div class="project-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">OpenAI API</span>
+            <span class="tech-tag">NLP</span>
+            <span class="tech-tag">Healthcare</span>
+          </div>
+          <a href="#" class="btn btn-secondary">View Project</a>
+        </div>
+        <div class="project-card">
+          <h3 class="project-title">COVID Vaccine Analysis</h3>
+          <p class="project-description">Comprehensive simulated data study modeling vaccine response in autoimmune patients, providing insights for personalized immunization strategies.</p>
+          <div class="project-tech">
+            <span class="tech-tag">R</span>
+            <span class="tech-tag">Statistics</span>
+            <span class="tech-tag">Immunology</span>
+            <span class="tech-tag">Data Analysis</span>
+          </div>
+          <a href="#" class="btn btn-secondary">View Project</a>
+        </div>
+        <div class="project-card">
+          <h3 class="project-title">Healthcare Dashboard</h3>
+          <p class="project-description">Interactive visualization platform using Streamlit and public health data to track patient outcomes and identify care improvement opportunities.</p>
+          <div class="project-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Streamlit</span>
+            <span class="tech-tag">Data Viz</span>
+            <span class="tech-tag">Public Health</span>
+          </div>
+          <a href="#" class="btn btn-secondary">View Project</a>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 3rem;">
+        <a href="https://github.com/graysoncoleman" target="_blank" class="btn btn-primary">View All Projects on GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header">
+        <h2>Let's Work Together</h2>
+        <p>Ready to make an impact in healthcare? Let's connect and explore opportunities.</p>
+      </div>
+      <div class="contact-content">
+        <div class="contact-info">
+          <h3 style="margin-bottom: 2rem; color: var(--text-primary);">Get In Touch</h3>
+          <div class="contact-item">
+            <div class="contact-icon"></div>
+            <div>
+              <strong>Email</strong><br>
+              <a href="mailto:graysoncoleman@icloud.com" style="color: var(--text-accent);">graysoncoleman@icloud.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"></div>
+            <div>
+              <strong>Phone</strong><br>
+              <a href="tel:+19194410265" style="color: var(--text-accent);">(919) 441-0265</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"></div>
+            <div>
+              <strong>LinkedIn</strong><br>
+              <a href="https://linkedin.com/in/graysoncoleman" target="_blank" style="color: var(--text-accent);">linkedin.com/in/graysoncoleman</a>
+            </div>
+          </div>
+          <div style="margin-top: 3rem;">
+            <a href="Grayson_Coleman_Resume.pdf" target="_blank" class="btn btn-primary">Download Resume</a>
+          </div>
+        </div>
+        <form action="https://formspree.io/f/yourFormID" method="POST" class="contact-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required placeholder="Your Name" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="you@email.com" />
+          </div>
+          <div class="form-group">
+            <label for="budget">Project Budget</label>
+            <select id="budget" name="budget" required>
+              <option value="" disabled selected>Select Budget Range</option>
+              <option value="<$3k">&lt;$3k</option>
+              <option value="$3k - $5k">$3k - $5k</option>
+              <option value="$5k - $10k">$5k - $10k</option>
+              <option value=">$10k">&gt;$10k</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Grayson Coleman. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Typewriter Animation
+    const titles = [
+      "an Aspiring Physician Scientist",
+      "a Self-Taught Python Developer", 
+      "an Experienced Translational Bench Researcher",
+      "a Human-Centered Healthcare Professional",
+      "a Science Communicator and Educator",
+      "a Champion for Accessible Healthcare"
+    ];
+
+    const typewriter = document.getElementById("typewriter");
+    let titleIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    function type() {
+      const current = titles[titleIndex];
+      const displayed = current.substring(0, charIndex);
+      typewriter.textContent = displayed;
+
+      if (!isDeleting && charIndex < current.length) {
+        charIndex++;
+        setTimeout(type, 100);
+      } else if (!isDeleting && charIndex === current.length) {
+        isDeleting = true;
+        setTimeout(type, 1500);
+      } else if (isDeleting && charIndex > 0) {
+        charIndex--;
+        setTimeout(type, 50);
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        titleIndex = (titleIndex + 1) % titles.length;
+        setTimeout(type, 500);
+      }
+    }
+
+    // Scroll Animation Observer
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    // Navigation Active State
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('section');
+
+    const observerNav = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute('id');
+            navLinks.forEach(link => {
+              link.classList.remove('active');
+              if (link.getAttribute('href') === `#${id}`) {
+                link.classList.add('active');
+              }
+            });
+          }
+        });
+      },
+      { threshold: 0.6 }
+    );
+
+    // Smooth Scroll
+    navLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href').substring(1);
+        const target = document.getElementById(targetId);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    // Navbar Scroll Effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', () => {
+      // Start typewriter animation
+      setTimeout(type, 500);
+      
+      // Observe sections for scroll animations
+      sections.forEach(section => {
+        if (section.id !== 'hero') {
+          observer.observe(section);
+        }
+      });
+
+      // Observe sections for navigation
+      sections.forEach(section => {
+        observerNav.observe(section);
+      });
+    });
+  </script>
+</body>
+</html>
