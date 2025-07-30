@@ -6,13 +6,15 @@
   <title>Grayson Coleman | Data Science & Healthcare</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
 
+<body>
+  <!-- Header -->
   <header>
     <h1>Grayson Coleman</h1>
     <h2>I am <span id="typewriter"></span><span class="cursor">|</span></h2>
   </header>
 
+  <!-- Navigation -->
   <nav>
     <a href="#about">About</a>
     <a href="#portfolio">Portfolio</a>
@@ -20,11 +22,18 @@
     <a href="#contact">Contact</a>
   </nav>
 
+  <!-- About Section -->
   <section id="about">
     <h2>About Me</h2>
-    <p>I’m a recent UNC graduate with a strong foundation in biology, data science, and patient-centered healthcare. I’ve supported pediatric care at UNC Children’s Hospital, explored T-cell dynamics at the UNC Kidney Center, and built OpenAI-based tools to accelerate clinical trials. I’m passionate about using data and technology to improve health outcomes and advance medical innovation.</p>
+    <p>
+      I’m a recent UNC graduate with a strong foundation in biology, data science, and patient-centered healthcare.
+      I’ve supported pediatric care at UNC Children’s Hospital, explored T-cell dynamics at the UNC Kidney Center,
+      and built OpenAI-based tools to accelerate clinical trials. I’m passionate about using data and technology
+      to improve health outcomes and advance medical innovation.
+    </p>
   </section>
 
+  <!-- Portfolio Section -->
   <section id="portfolio">
     <h2>Featured Projects</h2>
     <ul>
@@ -33,11 +42,12 @@
       <li><strong>Healthcare Dashboard:</strong> Visualized patient outcomes using Streamlit and public health data.</li>
     </ul>
     <div class="cta-buttons">
-      <a href="https://github.com/YOUR_GITHUB" target="_blank">View My GitHub</a>
+      <a href="https://github.com/graysoncoleman" target="_blank">View My GitHub</a>
       <a href="#contact">Work With Me</a>
     </div>
   </section>
 
+  <!-- Resume Section -->
   <section id="resume">
     <h2>Resume</h2>
     <p>You can view or download my full resume below.</p>
@@ -47,22 +57,24 @@
     </div>
   </section>
 
+  <!-- Contact Section -->
   <section id="contact">
     <h2>Contact</h2>
     <p>Let’s connect! Whether you’re hiring, collaborating, or just want to chat about data in healthcare, reach out below:</p>
     <ul>
       <li><strong>Email:</strong> graysoncoleman@icloud.com</li>
       <li><strong>Phone:</strong> (919) 441-0265</li>
-      <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/YOUR_PROFILE" target="_blank">View Profile</a></li>
+      <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/graysoncoleman" target="_blank">View Profile</a></li>
     </ul>
   </section>
 
+  <!-- Footer -->
   <footer>
     &copy; 2025 Grayson Coleman. All rights reserved.
   </footer>
 
+  <!-- Smooth Scroll Script -->
   <script>
-    // Smooth scrolling for nav links
     document.querySelectorAll('nav a').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -77,49 +89,49 @@
       });
     });
   </script>
+
+  <!-- Typewriter Animation Script -->
   <script>
-  const titles = [
-    "an Aspiring Physician Scientist",
-    "a Self-Taught Python Developer",
-    "an Experienced Translational Bench Researcher",
-    "a Human-Centered Healthcare Professional",
-    "a Science Communicator and Educator",
-    "a Champion for Accessible Healthcare"
-  ];
+    const titles = [
+      "an Aspiring Physician Scientist",
+      "a Self-Taught Python Developer",
+      "an Experienced Translational Bench Researcher",
+      "a Human-Centered Healthcare Professional",
+      "a Science Communicator and Educator",
+      "a Champion for Accessible Healthcare"
+    ];
 
-  const typewriter = document.getElementById("typewriter");
-  let titleIndex = 0;
-  let charIndex = 0;
-  let isDeleting = false;
+    const typewriter = document.getElementById("typewriter");
+    let titleIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
 
-  let pauseAfterTyping = 1500; // in ms
-  let pauseAfterDeleting = 500;
+    const pauseAfterTyping = 1500;
+    const pauseAfterDeleting = 500;
 
-  function type() {
-    const current = titles[titleIndex];
-    const displayed = current.substring(0, charIndex);
-  
-    typewriter.textContent = displayed;
-  
-    if (!isDeleting && charIndex < current.length) {
-      charIndex++;
-      setTimeout(type, 100);
-    } else if (!isDeleting && charIndex === current.length) {
-      // Pause when fully typed
-      isDeleting = true;
-      setTimeout(type, pauseAfterTyping);
-    } else if (isDeleting && charIndex > 0) {
-      charIndex--;
-      setTimeout(type, 50);
-    } else if (isDeleting && charIndex === 0) {
-      isDeleting = false;
-      titleIndex = (titleIndex + 1) % titles.length;
-      setTimeout(type, pauseAfterDeleting);
+    function type() {
+      const current = titles[titleIndex];
+      const displayed = current.substring(0, charIndex);
+      typewriter.textContent = displayed;
+
+      if (!isDeleting && charIndex < current.length) {
+        charIndex++;
+        setTimeout(type, 100);
+      } else if (!isDeleting && charIndex === current.length) {
+        isDeleting = true;
+        setTimeout(type, pauseAfterTyping);
+      } else if (isDeleting && charIndex > 0) {
+        charIndex--;
+        setTimeout(type, 50);
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        titleIndex = (titleIndex + 1) % titles.length;
+        setTimeout(type, pauseAfterDeleting);
+      }
     }
-  }
 
-  // Start typing on page load
-  document.addEventListener("DOMContentLoaded", () => setTimeout(type, 500));
-</script>
+    document.addEventListener("DOMContentLoaded", () => setTimeout(type, 500));
+  </script>
+
 </body>
 </html>
