@@ -87,4 +87,24 @@
         margin: 0.75rem auto;
       }
     }
+
+    #typewriter {
+      font-weight: bold;
+      color: #1d3557;
+    }
+    
+    .cursor {
+      display: inline-block;
+      background-color: #1d3557;
+      width: 2px;
+      height: 1em;
+      animation: blink 0.7s steps(2, start) infinite;
+      margin-left: 2px;
+    }
+    
+    @keyframes blink {
+      to {
+        visibility: hidden;
+      }
+    }
   </style>
