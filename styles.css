@@ -1,110 +1,121 @@
-<style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f8f9fa;
-      color: #212529;
-    }
+/* === Base Styles === */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f9fa;
+  color: #212529;
+}
 
-    header {
-      background-color: #1d3557;
-      color: white;
-      padding: 2rem 1rem;
-      text-align: left;
-    }
+/* === Header === */
+header {
+  background-color: #1d3557;
+  color: white;
+  padding: 2rem 1rem;
+  text-align: left;
+}
 
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
 
-    header p {
-      font-size: 1.2rem;
-      margin-top: 0;
-    }
+header p {
+  font-size: 1.2rem;
+  margin-top: 0;
+}
 
-    nav {
-      display: flex;
-      justify-content: center;
-      background-color: #457b9d;
-      padding: 0.75rem;
-    }
+/* === Typing Animation === */
+h2 {
+  text-align: left;
+  padding-left: 2rem;
+  color: white;
+}
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 1.5rem;
-      font-weight: bold;
-    }
+#typewriter {
+  font-weight: bold;
+  color: white;
+}
 
-    nav a:hover {
-      text-decoration: underline;
-    }
+.cursor {
+  display: inline;
+  font-weight: bold;
+  font-size: 1.1em;
+  color: white;
+  animation: blink 1s step-end infinite;
+}
 
-    section {
-      padding: 2rem 1rem;
-      max-width: 900px;
-      margin: auto;
-    }
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
 
-    .cta-buttons {
-      margin-top: 2rem;
-    }
+/* === Navigation === */
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #457b9d;
+  padding: 0.75rem;
+}
 
-    .cta-buttons a {
-      display: inline-block;
-      margin: 0.5rem;
-      padding: 0.75rem 1.5rem;
-      background-color: #1d3557;
-      color: white;
-      border-radius: 5px;
-      text-decoration: none;
-      transition: background-color 0.3s;
-    }
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1.5rem;
+  font-weight: bold;
+}
 
-    .cta-buttons a:hover {
-      background-color: #0b1e38;
-    }
+nav a:hover {
+  text-decoration: underline;
+}
 
-    footer {
-      background-color: #f1f1f1;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-    }
+/* === Main Content === */
+section {
+  padding: 2rem 1rem;
+  max-width: 900px;
+  margin: auto;
+}
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2rem;
-      }
+/* === Call-to-Action Buttons === */
+.cta-buttons {
+  margin-top: 2rem;
+}
 
-      nav a {
-        margin: 0 0.75rem;
-      }
+.cta-buttons a {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #1d3557;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
 
-      .cta-buttons a {
-        display: block;
-        margin: 0.75rem auto;
-      }
-    }
+.cta-buttons a:hover {
+  background-color: #0b1e38;
+}
 
-    #typewriter {
-      font-weight: bold;
-      color: white;
-    }
-    
-    .cursor {
-        display: inline;
-        font-weight: bold;
-        font-size: 1.1em;
-        color: white;
-        animation: blink 1s step-end infinite;
-    }
-    
-    @keyframes blink {
-      50% {
-        opacity: 0;
-      }
-    }
+/* === Footer === */
+footer {
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
 
-  </style>
+/* === Responsive Design === */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  nav a {
+    margin: 0 0.75rem;
+  }
+
+  .cta-buttons a {
+    display: block;
+    margin: 0.75rem auto;
+  }
+}
