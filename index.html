@@ -200,7 +200,7 @@
 
     .btn {
       padding: 1rem 2rem;
-      border: none;
+      border: 1px solid rgba(255, 255, 255, 0.2);
       border-radius: var(--border-radius);
       font-weight: 600;
       text-decoration: none;
@@ -208,26 +208,19 @@
       position: relative;
       overflow: hidden;
       display: inline-block;
-    }
-
-    .btn-primary {
-      background: var(--primary-gradient);
-      color: white;
-      box-shadow: var(--shadow-glow);
-    }
-
-    .btn-secondary {
       background: var(--glass-bg);
       color: var(--text-primary);
-      border: 1px solid rgba(255, 255, 255, 0.2);
       backdrop-filter: blur(10px);
     }
-
+    
     .btn:hover {
+      background: var(--primary-gradient);
+      color: white;
+      border: none;
       transform: translateY(-5px);
       box-shadow: 0 25px 50px rgba(103, 126, 234, 0.4);
     }
-
+    
     .btn::before {
       content: '';
       position: absolute;
@@ -238,7 +231,7 @@
       background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
       transition: left 0.5s;
     }
-
+    
     .btn:hover::before {
       left: 100%;
     }
@@ -528,6 +521,27 @@
         grid-template-columns: repeat(2, 1fr);
       }
     }
+
+    .carousel {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+    
+    .carousel-track {
+      display: flex;
+      overflow: hidden;
+      width: 100%;
+      max-width: 400px;
+    }
+    
+    .carousel-track .project-card {
+      min-width: 100%;
+      flex-shrink: 0;
+      transition: transform 0.5s ease;
+    }
+
   </style>
 </head>
 
@@ -551,8 +565,8 @@
           I am <span id="typewriter"></span><span class="cursor">|</span>
         </div>
         <div class="hero-cta">
-          <a href="#portfolio" class="btn btn-primary">View My Work</a>
-          <a href="#contact" class="btn btn-secondary">Let's Connect</a>
+          <a href="#portfolio" class="btn">View My Work</a>
+          <a href="#contact" class="btn">Let's Connect</a>
         </div>
       </div>
     </div>
@@ -604,43 +618,52 @@
         <h2>Featured Projects</h2>
         <p>Innovative solutions at the intersection of healthcare, data science, and technology</p>
       </div>
-      <div class="projects-grid">
-        <div class="project-card">
-          <h3 class="project-title">Clinical Trial Assistant</h3>
-          <p class="project-description">NLP tool using OpenAI API to generate draft protocols, streamlining the clinical trial development process and reducing time-to-market for critical treatments.</p>
-          <div class="project-tech">
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">OpenAI API</span>
-            <span class="tech-tag">NLP</span>
-            <span class="tech-tag">Healthcare</span>
+      <div class="carousel">
+  <button id="prevBtn" class="btn">&#8592;</button>
+  
+        <div class="carousel-track">
+          <div class="project-card">
+            <h3 class="project-title">Clinical Trial Assistant</h3>
+            <p class="project-description">NLP tool using OpenAI API to generate draft protocols, streamlining the clinical trial development process and reducing time-to-market for critical treatments.</p>
+            <div class="project-tech">
+              <span class="tech-tag" data-description="High-level programming language">Python</span>
+              <span class="tech-tag">OpenAI API</span>
+              <span class="tech-tag">NLP</span>
+              <span class="tech-tag">Healthcare</span>
+            </div>
+            <a href="#" class="btn">View Project</a>
           </div>
-          <a href="#" class="btn btn-secondary">View Project</a>
-        </div>
-        <div class="project-card">
-          <h3 class="project-title">COVID Vaccine Analysis</h3>
-          <p class="project-description">Comprehensive simulated data study modeling vaccine response in autoimmune patients, providing insights for personalized immunization strategies.</p>
-          <div class="project-tech">
-            <span class="tech-tag">R</span>
-            <span class="tech-tag">Statistics</span>
-            <span class="tech-tag">Immunology</span>
-            <span class="tech-tag">Data Analysis</span>
+      
+          <div class="project-card">
+            <h3 class="project-title">COVID Vaccine Analysis</h3>
+            <p class="project-description">Comprehensive simulated data study modeling vaccine response in autoimmune patients, providing insights for personalized immunization strategies.</p>
+            <div class="project-tech">
+              <span class="tech-tag">R</span>
+              <span class="tech-tag">Statistics</span>
+              <span class="tech-tag">Immunology</span>
+              <span class="tech-tag">Data Analysis</span>
+            </div>
+            <a href="#" class="btn">View Project</a>
           </div>
-          <a href="#" class="btn btn-secondary">View Project</a>
-        </div>
-        <div class="project-card">
-          <h3 class="project-title">Healthcare Dashboard</h3>
-          <p class="project-description">Interactive visualization platform using Streamlit and public health data to track patient outcomes and identify care improvement opportunities.</p>
-          <div class="project-tech">
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">Streamlit</span>
-            <span class="tech-tag">Data Viz</span>
-            <span class="tech-tag">Public Health</span>
+      
+          <div class="project-card">
+            <h3 class="project-title">Healthcare Dashboard</h3>
+            <p class="project-description">Interactive visualization platform using Streamlit and public health data to track patient outcomes and identify care improvement opportunities.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Streamlit</span>
+              <span class="tech-tag">Data Viz</span>
+              <span class="tech-tag">Public Health</span>
+            </div>
+            <a href="#" class="btn">View Project</a>
           </div>
-          <a href="#" class="btn btn-secondary">View Project</a>
         </div>
+      
+        <button id="nextBtn" class="btn">&#8594;</button>
       </div>
+
       <div style="text-align: center; margin-top: 3rem;">
-        <a href="https://github.com/graysoncoleman" target="_blank" class="btn btn-primary">View All Projects on GitHub</a>
+        <a href="https://github.com/graysoncoleman" target="_blank" class="btn">View All Projects on GitHub</a>
       </div>
     </div>
   </section>
@@ -677,7 +700,7 @@
             </div>
           </div>
           <div style="margin-top: 3rem;">
-            <a href="Grayson_Coleman_Resume.pdf" target="_blank" class="btn btn-primary">Download Resume</a>
+            <a href="Grayson_Coleman_Resume.pdf" target="_blank" class="btn">Download Resume</a>
           </div>
         </div>
         <form action="https://formspree.io/f/yourFormID" method="POST" class="contact-form">
@@ -697,7 +720,7 @@
             <label for="message">Message</label>
             <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project..." style="resize: none;"></textarea>
           </div>
-          <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+          <button type="submit" class="btn" style="width: 100%;">Send Message</button>
         </form>
       </div>
     </div>
@@ -827,26 +850,25 @@
       });
     });
 
-    // Auto-Rotating Project Cards
-    const projectCards = document.querySelectorAll('.project-card');
-    let currentProject = 0;
+    // Carousel Cards
+    const track = document.querySelector('.carousel-track');
+    const cards = document.querySelectorAll('.carousel-track .project-card');
+    let currentIndex = 0;
     
-    function showProject(index) {
-      projectCards.forEach((card, i) => {
-        card.style.display = i === index ? 'block' : 'none';
-      });
+    function updateCarousel() {
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
     }
     
-    function cycleProjects() {
-      showProject(currentProject);
-      currentProject = (currentProject + 1) % projectCards.length;
-    }
+    document.getElementById('prevBtn').addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+      updateCarousel();
+    });
     
-    if (projectCards.length > 1) {
-      showProject(currentProject);
-      setInterval(cycleProjects, 4000); // rotate every 4 seconds
-    }
-    
+    document.getElementById('nextBtn').addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % cards.length;
+      updateCarousel();
+    });
+
   </script>
 </body>
 </html>
