@@ -643,55 +643,74 @@
     <div class="container">
       <div class="section-header">
         <h2>Featured Projects</h2>
+        <p>Innovative solutions at the intersection of healthcare, data science, and technology</p>
       </div>
-
-      <div class="carousel">
-        <button id="prevBtn" class="btn">&#8592;</button>
-        
-        <div class="carousel-track">
-          <div class="project-card">
+      <div class="projects-carousel" id="projectsCarousel">
+        <div class="projects-track" id="projectsTrack">
+          <div class="project-card active">
             <h3 class="project-title">Clinical Trial Assistant</h3>
-            <p class="project-description">NLP tool using OpenAI API to generate draft protocols, streamlining the clinical trial development process and reducing time-to-market for critical treatments.</p>
+            <p class="project-description">NLP tool using OpenAI API to generate draft protocols, streamlining the clinical trial development process and reducing time-to-market for critical treatments. This innovative solution leverages advanced natural language processing to automate protocol generation, ensuring compliance with regulatory standards while significantly reducing manual effort.</p>
             <div class="project-tech">
-              <span class="tech-tag" data-description="High-level programming language">Python</span>
+              <span class="tech-tag">Python</span>
               <span class="tech-tag">OpenAI API</span>
               <span class="tech-tag">NLP</span>
               <span class="tech-tag">Healthcare</span>
             </div>
-            <a href="#" class="btn">View Project</a>
+            <div class="project-links">
+              <a href="#" class="btn btn-secondary">View Project</a>
+              <a href="#" class="btn btn-primary">Live Demo</a>
+            </div>
           </div>
-      
           <div class="project-card">
             <h3 class="project-title">COVID Vaccine Analysis</h3>
-            <p class="project-description">Comprehensive simulated data study modeling vaccine response in autoimmune patients, providing insights for personalized immunization strategies.</p>
+            <p class="project-description">Comprehensive simulated data study modeling vaccine response in autoimmune patients, providing insights for personalized immunization strategies. This research project utilized advanced statistical modeling and machine learning techniques to analyze immune responses and identify key factors affecting vaccine efficacy in vulnerable populations.</p>
             <div class="project-tech">
               <span class="tech-tag">R</span>
               <span class="tech-tag">Statistics</span>
               <span class="tech-tag">Immunology</span>
               <span class="tech-tag">Data Analysis</span>
             </div>
-            <a href="#" class="btn">View Project</a>
+            <div class="project-links">
+              <a href="#" class="btn btn-secondary">View Project</a>
+              <a href="#" class="btn btn-primary">Research Paper</a>
+            </div>
           </div>
-      
           <div class="project-card">
             <h3 class="project-title">Healthcare Dashboard</h3>
-            <p class="project-description">Interactive visualization platform using Streamlit and public health data to track patient outcomes and identify care improvement opportunities.</p>
+            <p class="project-description">Interactive visualization platform using Streamlit and public health data to track patient outcomes and identify care improvement opportunities. The dashboard provides real-time insights into treatment effectiveness, patient satisfaction scores, and operational metrics, enabling healthcare administrators to make data-driven decisions for improved patient care.</p>
             <div class="project-tech">
               <span class="tech-tag">Python</span>
               <span class="tech-tag">Streamlit</span>
               <span class="tech-tag">Data Viz</span>
               <span class="tech-tag">Public Health</span>
             </div>
-            <a href="#" class="btn">View Project</a>
+            <div class="project-links">
+              <a href="#" class="btn btn-secondary">View Project</a>
+              <a href="#" class="btn btn-primary">Try Dashboard</a>
+            </div>
           </div>
         </div>
-      
-        <button id="nextBtn" class="btn">&#8594;</button>
+        
+        <button class="carousel-nav prev" id="prevBtn">
+          <svg viewBox="0 0 24 24">
+            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+          </svg>
+        </button>
+        
+        <button class="carousel-nav next" id="nextBtn">
+          <svg viewBox="0 0 24 24">
+            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+          </svg>
+        </button>
       </div>
-
-
+      
+      <div class="carousel-indicators" id="carouselIndicators">
+        <div class="indicator active" data-slide="0"></div>
+        <div class="indicator" data-slide="1"></div>
+        <div class="indicator" data-slide="2"></div>
+      </div>
       <div style="text-align: center; margin-top: 3rem;">
-        <a href="https://github.com/graysoncoleman" target="_blank" class="btn">View All Projects on GitHub</a>
+        <a href="https://github.com/graysoncoleman" target="_blank" class="btn btn-primary">View All Projects on GitHub</a>
       </div>
     </div>
   </section>
