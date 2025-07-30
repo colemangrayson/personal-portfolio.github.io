@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Grayson Coleman | Data Science & Healthcare</title>
-  <h2>I’m a <span id="typewriter"></span><span class="cursor">|</span></h2>
+  <h2>I am a<span id="typewriter"></span><span class="cursor">|</span></h2>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -80,11 +80,9 @@
   </script>
   <script>
   const titles = [
-    "Data Scientist",
-    "Researcher",
-    "Healthcare Technologist",
-    "Clinical Analyst",
-    "Python Developer"
+    "n Aspiring Physician Scientist",
+    " Self-Taught Python Developer",
+    "n Experienced Translational Bench Researcher"
   ];
 
   const typewriter = document.getElementById("typewriter");
@@ -92,24 +90,29 @@
   let charIndex = 0;
   let isDeleting = false;
 
+  let pauseAfterTyping = 1500; // in ms
+  let pauseAfterDeleting = 500;
+
   function type() {
     const current = titles[titleIndex];
     const displayed = current.substring(0, charIndex);
-
+  
     typewriter.textContent = displayed;
-
+  
     if (!isDeleting && charIndex < current.length) {
       charIndex++;
       setTimeout(type, 100);
+    } else if (!isDeleting && charIndex === current.length) {
+      // Pause when fully typed
+      isDeleting = true;
+      setTimeout(type, pauseAfterTyping);
     } else if (isDeleting && charIndex > 0) {
       charIndex--;
       setTimeout(type, 50);
-    } else {
-      isDeleting = !isDeleting;
-      if (!isDeleting) {
-        titleIndex = (titleIndex + 1) % titles.length;
-      }
-      setTimeout(type, 10000);
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      titleIndex = (titleIndex + 1) % titles.length;
+      setTimeout(type, pauseAfterDeleting);
     }
   }
 
