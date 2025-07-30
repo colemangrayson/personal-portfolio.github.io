@@ -95,7 +95,7 @@
     
     .cursor {
         display: inline;
-        font-weight: normal;
+        font-weight: 100;
         font-size: 1.1em;
         color: #1d3557;
         animation: blink 1s step-end infinite;
