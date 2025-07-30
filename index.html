@@ -826,6 +826,27 @@
         observerNav.observe(section);
       });
     });
+
+    // Auto-Rotating Project Cards
+    const projectCards = document.querySelectorAll('.project-card');
+    let currentProject = 0;
+    
+    function showProject(index) {
+      projectCards.forEach((card, i) => {
+        card.style.display = i === index ? 'block' : 'none';
+      });
+    }
+    
+    function cycleProjects() {
+      showProject(currentProject);
+      currentProject = (currentProject + 1) % projectCards.length;
+    }
+    
+    if (projectCards.length > 1) {
+      showProject(currentProject);
+      setInterval(cycleProjects, 4000); // rotate every 4 seconds
+    }
+    
   </script>
 </body>
 </html>
