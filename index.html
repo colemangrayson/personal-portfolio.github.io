@@ -523,6 +523,8 @@
     }
 
     .carousel {
+      max-width: 1000px;
+      margin: 0 auto;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -533,13 +535,14 @@
       display: flex;
       overflow: hidden;
       width: 100%;
-      max-width: 400px;
     }
     
     .carousel-track .project-card {
+      min-height: 100%;
       min-width: 100%;
       flex-shrink: 0;
-      transition: transform 0.5s ease;
+      flex-grow: 1;
+      box-sizing: border-box;
     }
 
   </style>
