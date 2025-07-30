@@ -400,6 +400,31 @@
       border-radius: 20px;
       font-size: 0.8rem;
       border: 1px solid rgba(0, 242, 254, 0.3);
+      position: relative;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .tech-tag::after {
+      content: attr(data-description);
+      position: absolute;
+      top: 120%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--glass-bg);
+      color: var(--text-secondary);
+      padding: 0.5rem;
+      border-radius: 10px;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      z-index: 10;
+    }
+    
+    .tech-tag:hover::after {
+      opacity: 1;
     }
 
     /* === Contact Section === */
