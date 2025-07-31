@@ -853,7 +853,7 @@
       </div>
       <div class="projects-carousel" id="projectsCarousel">
         <div class="projects-track" id="projectsTrack">
-          <div class="project-card active">
+          <div class="project-card active" data-project="0">
             <h3 class="project-title">Clinical Trial Assistant</h3>
             <p class="project-description">NLP tool using OpenAI API to generate draft protocols, streamlining the clinical trial development process and reducing time-to-market for critical treatments. This innovative solution leverages advanced natural language processing to automate protocol generation, ensuring compliance with regulatory standards while significantly reducing manual effort.</p>
             <div class="project-tech">
@@ -863,11 +863,12 @@
               <span class="tech-tag">Healthcare</span>
             </div>
             <div class="project-links">
-              <a href="#" class="btn">View Project</a>
-              <a href="#" class="btn">Live Demo</a>
+              <a href="#" class="btn action-btn">View Project</a>
+              <a href="#" class="btn action-btn">Live Demo</a>
             </div>
+            <button class="read-more-tab" onclick="openModal(0)">Read More ↑</button>
           </div>
-          <div class="project-card">
+          <div class="project-card" data-project="1">
             <h3 class="project-title">COVID Vaccine Analysis</h3>
             <p class="project-description">Comprehensive simulated data study modeling vaccine response in autoimmune patients, providing insights for personalized immunization strategies. This research project utilized advanced statistical modeling and machine learning techniques to analyze immune responses and identify key factors affecting vaccine efficacy in vulnerable populations.</p>
             <div class="project-tech">
@@ -877,11 +878,12 @@
               <span class="tech-tag">Data Analysis</span>
             </div>
             <div class="project-links">
-              <a href="#" class="btn">View Project</a>
-              <a href="#" class="btn">Research Paper</a>
+              <a href="#" class="btn action-btn">View Project</a>
+              <a href="#" class="btn action-btn">Research Paper</a>
             </div>
+            <button class="read-more-tab" onclick="openModal(1)">Read More ↑</button>
           </div>
-          <div class="project-card">
+          <div class="project-card" data-project="2">
             <h3 class="project-title">Healthcare Dashboard</h3>
             <p class="project-description">Interactive visualization platform using Streamlit and public health data to track patient outcomes and identify care improvement opportunities. The dashboard provides real-time insights into treatment effectiveness, patient satisfaction scores, and operational metrics, enabling healthcare administrators to make data-driven decisions for improved patient care.</p>
             <div class="project-tech">
@@ -891,9 +893,10 @@
               <span class="tech-tag">Public Health</span>
             </div>
             <div class="project-links">
-              <a href="#" class="btn">View Project</a>
-              <a href="#" class="btn">Try Dashboard</a>
+              <a href="#" class="btn action-btn">View Project</a>
+              <a href="#" class="btn action-btn">Try Dashboard</a>
             </div>
+            <button class="read-more-tab" onclick="openModal(2)">Read More ↑</button>
           </div>
         </div>
         
@@ -916,7 +919,7 @@
         <div class="indicator" data-slide="2"></div>
       </div>
       <div style="text-align: center; margin-top: 3rem;">
-        <a href="https://github.com/graysoncoleman" target="_blank" class="btn">View All Projects on GitHub</a>
+        <a href="https://github.com/graysoncoleman" target="_blank" class="btn action-btn">View All Projects on GitHub</a>
       </div>
     </div>
   </section>
