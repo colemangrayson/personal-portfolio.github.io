@@ -451,11 +451,11 @@
     }
 
     .carousel-nav.prev {
-      left: -40px;
+      left: -80px;
     }
 
     .carousel-nav.next {
-      right: -50px;
+      right: -80px;
     }
 
     .carousel-nav svg {
@@ -490,6 +490,145 @@
       display: flex;
       gap: 1rem;
       align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    /* === Read More Tab === */
+    .read-more-tab {
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--accent-gradient);
+      color: white;
+      padding: 0.5rem 1.5rem;
+      border-radius: 20px 20px 0 0;
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      z-index: 5;
+      border: none;
+      box-shadow: 0 -5px 15px rgba(0, 242, 254, 0.3);
+    }
+
+    .read-more-tab:hover {
+      transform: translateX(-50%) translateY(-5px);
+      box-shadow: 0 -10px 25px rgba(0, 242, 254, 0.5);
+    }
+
+    /* === Modal Overlay === */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(15, 15, 35, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 2000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.4s ease;
+      padding: 2rem;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal-content {
+      background: var(--card-bg);
+      border-radius: var(--border-radius);
+      padding: 3rem;
+      max-width: 800px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(20px);
+      position: relative;
+      transform: scale(0.8) translateY(50px);
+      transition: all 0.4s ease;
+    }
+
+    .modal-overlay.active .modal-content {
+      transform: scale(1) translateY(0);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      border: none;
+      color: var(--text-secondary);
+      font-size: 2rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal-close:hover {
+      background: var(--glass-bg);
+      color: var(--text-primary);
+    }
+
+    .modal-header {
+      margin-bottom: 2rem;
+    }
+
+    .modal-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      background: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 1rem;
+    }
+
+    .modal-description {
+      color: var(--text-secondary);
+      line-height: 1.8;
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+
+    .modal-details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .detail-section h4 {
+      color: var(--text-accent);
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .detail-section p,
+    .detail-section ul {
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .detail-section ul {
+      padding-left: 1.5rem;
+    }
+
+    .detail-section li {
+      margin-bottom: 0.5rem;
     }
     
     /* === Contact Section === */
@@ -846,6 +985,125 @@
     </div>
   </footer>
 
+  <!-- Modal Overlay -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal()">&times;</button>
+      <div class="modal-header">
+        <h3 class="modal-title" id="modalTitle">Project Title</h3>
+      </div>
+      <div class="modal-description" id="modalDescription">
+        Project description goes here...
+      </div>
+      <div class="modal-details" id="modalDetails">
+        <!-- Details will be populated by JavaScript -->
+      </div>
+      <div style="text-align: center; margin-top: 2rem;">
+        <div id="modalLinks">
+          <!-- Links will be populated by JavaScript -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Project data for modals
+    const projectData = [
+      {
+        title: "Clinical Trial Assistant",
+        description: "An advanced NLP tool using OpenAI's GPT API to generate comprehensive draft protocols for clinical trials. This innovative solution addresses the time-intensive process of protocol development by automating the initial drafting phase while ensuring compliance with FDA and ICH-GCP guidelines.",
+        details: {
+          "Key Features": [
+            "Automated protocol generation based on study parameters",
+            "Integration with regulatory databases for compliance checking",
+            "Customizable templates for different study types",
+            "Version control and collaborative editing capabilities",
+            "Export to multiple formats (PDF, Word, XML)"
+          ],
+          "Technical Implementation": [
+            "Python backend with FastAPI framework",
+            "OpenAI GPT-4 API integration for natural language generation",
+            "PostgreSQL database for storing templates and protocols",
+            "React frontend with real-time collaboration features",
+            "Docker containerization for easy deployment"
+          ],
+          "Impact & Results": [
+            "Reduced protocol drafting time by 70%",
+            "Improved consistency across trial protocols",
+            "Enhanced compliance with regulatory standards",
+            "Facilitated faster study startup times",
+            "Adopted by 3 clinical research organizations"
+          ]
+        },
+        links: [
+          { text: "View on GitHub", url: "#", primary: false },
+          { text: "Live Demo", url: "#", primary: true }
+        ]
+      },
+      {
+        title: "COVID Vaccine Analysis",
+        description: "A comprehensive research study analyzing COVID-19 vaccine responses in patients with autoimmune conditions. Using simulated data based on real-world clinical patterns, this project developed predictive models to identify factors affecting vaccine efficacy in immunocompromised populations.",
+        details: {
+          "Research Methodology": [
+            "Simulated dataset of 10,000 patients with various autoimmune conditions",
+            "Statistical modeling using R and advanced regression techniques",
+            "Machine learning algorithms for predictive analysis",
+            "Survival analysis for long-term immunity duration",
+            "Propensity score matching for treatment comparisons"
+          ],
+          "Key Findings": [
+            "Immunosuppressive therapy timing significantly affects vaccine response",
+            "Certain autoimmune conditions show predictable response patterns",
+            "Age and disease duration are key predictive factors",
+            "Booster timing optimization improves long-term immunity",
+            "Personalized vaccination schedules show 40% improvement in efficacy"
+          ],
+          "Tools & Technologies": [
+            "R Studio for statistical analysis and visualization",
+            "ggplot2 and plotly for interactive data visualization",
+            "randomForest and caret packages for machine learning",
+            "Survival package for time-to-event analysis",
+            "Shiny for interactive dashboard development"
+          ]
+        },
+        links: [
+          { text: "Research Paper", url: "#", primary: false },
+          { text: "Interactive Dashboard", url: "#", primary: true }
+        ]
+      },
+      {
+        title: "Healthcare Dashboard",
+        description: "An interactive visualization platform built with Streamlit that aggregates public health data to provide actionable insights for healthcare administrators. The dashboard tracks patient outcomes, operational metrics, and quality indicators to support data-driven decision making in healthcare organizations.",
+        details: {
+          "Dashboard Features": [
+            "Real-time patient outcome tracking and trends",
+            "Interactive maps showing regional health patterns",
+            "Predictive analytics for patient flow and resource allocation",
+            "Quality metrics and performance indicators",
+            "Customizable alerts and automated reporting"
+          ],
+          "Data Sources": [
+            "CMS Hospital Compare database",
+            "CDC National Health Statistics",
+            "State health department public datasets",
+            "Hospital discharge data (anonymized)",
+            "Patient satisfaction survey results"
+          ],
+          "Technical Architecture": [
+            "Streamlit framework for rapid dashboard development",
+            "Pandas and NumPy for data processing and analysis",
+            "Plotly and Altair for interactive visualizations",
+            "PostgreSQL database for data storage",
+            "Automated ETL pipelines using Apache Airflow"
+          ]
+        },
+        links: [
+          { text: "View Source Code", url: "#", primary: false },
+          { text: "Try Dashboard", url: "#", primary: true }
+        ]
+      }
+    ];
+    
   <script>
     // Typewriter Animation
     const titles = [
