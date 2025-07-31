@@ -198,8 +198,10 @@
       flex-wrap: wrap;
     }
 
+    /* === Button Dynamics === */
     .btn {
       padding: 1rem 2rem;
+      border: 1px solid rgba(255, 255, 255, 0.2);
       border-radius: var(--border-radius);
       font-weight: 600;
       text-decoration: none;
@@ -207,36 +209,20 @@
       position: relative;
       overflow: hidden;
       display: inline-block;
+      background: var(--glass-bg);
+      color: var(--text-primary);
+      backdrop-filter: blur(10px);
       cursor: pointer;
     }
     
-    /* Action buttons: no transform, no shimmer, but change color */
-    .btn-action {
-      background: var(--glass-bg);
-      color: var(--text-primary);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      backdrop-filter: blur(10px);
-    }
-    
-    .btn-action:hover {
+    .btn:hover {
       background: var(--primary-gradient);
       color: white;
-    }
-    
-    /* Static/decorative buttons: transform and shimmer, no color change */
-    .btn-static {
-      background: var(--glass-bg);
-      color: var(--text-primary);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      backdrop-filter: blur(10px);
-    }
-    
-    .btn-static:hover {
+      border: none;
       transform: translateY(-5px);
-      box-shadow: 0 25px 50px rgba(103, 126, 234, 0.4);
     }
     
-    .btn-static::before {
+    .btn::before {
       content: '';
       position: absolute;
       top: 0;
@@ -247,7 +233,7 @@
       transition: left 0.5s;
     }
     
-    .btn-static:hover::before {
+    .btn:hover::before {
       left: 100%;
     }
 
@@ -675,8 +661,8 @@
           <span id="typewriter"></span><span class="cursor">|</span>
         </div>
         <div class="hero-cta">
-          <a href="#portfolio" class="btn btn-action">View My Work</a>
-          <a href="#contact" class="btn btn-action">Let's Connect</a>
+          <a href="#portfolio" class="btn">View My Work</a>
+          <a href="#contact" class="btn">Let's Connect</a>
         </div>
       </div>
     </div>
@@ -739,8 +725,8 @@
               <span class="tech-tag">Healthcare</span>
             </div>
             <div class="project-links">
-              <a href="#" class="btn btn-action">View Project</a>
-              <a href="#" class="btn btn-action">Live Demo</a>
+              <a href="#" class="btn">View Project</a>
+              <a href="#" class="btn">Live Demo</a>
             </div>
           </div>
           <div class="project-card">
@@ -753,8 +739,8 @@
               <span class="tech-tag">Data Analysis</span>
             </div>
             <div class="project-links">
-              <a href="#" class="btn btn-action">View Project</a>
-              <a href="#" class="btn btn-action">Research Paper</a>
+              <a href="#" class="btn">View Project</a>
+              <a href="#" class="btn">Research Paper</a>
             </div>
           </div>
           <div class="project-card">
@@ -767,8 +753,8 @@
               <span class="tech-tag">Public Health</span>
             </div>
             <div class="project-links">
-              <a href="#" class="btn btn-action">View Project</a>
-              <a href="#" class="btn btn-action">Try Dashboard</a>
+              <a href="#" class="btn">View Project</a>
+              <a href="#" class="btn">Try Dashboard</a>
             </div>
           </div>
         </div>
@@ -792,7 +778,7 @@
         <div class="indicator" data-slide="2"></div>
       </div>
       <div style="text-align: center; margin-top: 3rem;">
-        <a href="https://github.com/graysoncoleman" target="_blank" class="btn btn-action">View All Projects on GitHub</a>
+        <a href="https://github.com/graysoncoleman" target="_blank" class="btn">View All Projects on GitHub</a>
       </div>
     </div>
   </section>
