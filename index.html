@@ -644,6 +644,49 @@
     .detail-section li {
       margin-bottom: 0.5rem;
     }
+
+    /* === Modal Statistics === */
+    .modal-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+      padding: 2rem 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .modal-stat-card {
+      background: var(--glass-bg);
+      padding: 1.5rem;
+      border-radius: 15px;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+    }
+
+    .modal-stat-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 242, 254, 0.2);
+    }
+
+    .modal-stat-number {
+      font-size: 2rem;
+      font-weight: 800;
+      background: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .modal-stat-label {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
     
     /* === Contact Section === */
     .contact-content {
@@ -1276,6 +1319,31 @@
 
       // Clear previous details
       details.innerHTML = '';
+
+      // Add statistics section
+      if (project.stats) {
+        const statsSection = document.createElement('div');
+        statsSection.className = 'modal-stats';
+        
+        project.stats.forEach(stat => {
+          const statCard = document.createElement('div');
+          statCard.className = 'modal-stat-card';
+          
+          const statNumber = document.createElement('div');
+          statNumber.className = 'modal-stat-number';
+          statNumber.textContent = stat.number;
+          
+          const statLabel = document.createElement('div');
+          statLabel.className = 'modal-stat-label';
+          statLabel.textContent = stat.label;
+          
+          statCard.appendChild(statNumber);
+          statCard.appendChild(statLabel);
+          statsSection.appendChild(statCard);
+        });
+        
+        details.appendChild(statsSection);
+      }
 
       // Populate details
       Object.entries(project.details).forEach(([key, value]) => {
