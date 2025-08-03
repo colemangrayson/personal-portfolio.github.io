@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grayson Coleman | Data Science & Healthcare</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <div class="bg-animation"></div>
+  
+  <!-- Navigation -->
+  <nav id="navbar">
+    <a href="#hero" class="nav-link active">Home</a>
+    <a href="#about" class="nav-link">About</a>
+    <a href="#portfolio" class="nav-link">Portfolio</a>
+    <a href="#contact" class="nav-link">Contact</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="visible">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Grayson Coleman</h1>
+        <div class="hero-subtitle">
+          <span id="typewriter"></span><span class="cursor">|</span>
+        </div>
+        <div class="hero-cta">
+          <a href="#portfolio" class="btn">View My Work</a>
+          <a href="#contact" class="btn">Let's Connect</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <div class="section-header">
+        <h2>About Me</h2>
+      </div>
+      <div class="about-content">
+        <div class="about-text">
+          <p>I am an aspiring physician-scientist driven by a passion for bridging clinical care with translational research and digital innovation. With hands-on experience in pediatric healthcare, immunology research, and self-taught computer science, I've explored the intersections of patient care, molecular science, and health technology. From investigating autoimmune mechanisms in the lab to developing AI tools for clinical trials, and from advocating for health access as a health insurance navigator to writing science articles that inform and inspire, my work is rooted in service, curiosity, and impact. I aim to pursue a career where I can care deeply, think rigorously, and innovate boldly to advance medicine that is both cutting-edge and compassionate.</p>
+        </div>
+        <div class="about-visual">
+          <div style="text-align: center; z-index: 1;">
+            <div style="font-size: 4rem; margin-bottom: 1rem;">🧬</div>
+            <div style="color: var(--accent-primary); font-weight: 600;">Data-Driven Healthcare</div>
+          </div>
+        </div>
+      </div>
+      <div class="stats">
+        <div class="stat-card">
+          <div class="stat-number">6</div>
+          <div class="stat-label">Different Industries</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">7,500+</div>
+          <div class="stat-label">Hours of Experience</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">5</div>
+          <div class="stat-label">Roles I Bring</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">0</div>
+          <div class="stat-label">Unfinished Projects</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio">
+    <div class="container">
+      <div class="section-header">
+        <h2>Featured Projects</h2>
+      </div>
+      <div class="projects-carousel" id="projectsCarousel">
+        <div class="projects-track" id="projectsTrack">
+          <!-- Projects will be dynamically loaded here -->
+        </div>
+        
+        <button class="carousel-nav prev" id="prevBtn">
+          <svg viewBox="0 0 24 24">
+            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+          </svg>
+        </button>
+        
+        <button class="carousel-nav next" id="nextBtn">
+          <svg viewBox="0 0 24 24">
+            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+          </svg>
+        </button>
+      </div>
+      
+      <div class="carousel-indicators" id="carouselIndicators">
+        <!-- Indicators will be dynamically generated -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header">
+        <h2>Let's Work Together</h2>
+      </div>
+      <div class="contact-content">
+        <div class="contact-info">
+          <h3 style="margin-bottom: 2rem; color: var(--text-primary);">Get In Touch</h3>
+          <div class="contact-item">
+            <div class="contact-icon"></div>
+            <div>
+              <strong>Email</strong><br>
+              <a href="mailto:graysoncoleman@icloud.com" style="color: var(--accent-primary);">graysoncoleman@icloud.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"></div>
+            <div>
+              <strong>Phone</strong><br>
+              <a href="tel:+19194410265" style="color: var(--accent-primary);">(919) 441-0265</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"></div>
+            <div>
+              <strong>LinkedIn</strong><br>
+              <a href="https://linkedin.com/in/graysoncoleman" target="_blank" style="color: var(--accent-primary);">linkedin.com/in/graysoncoleman</a>
+            </div>
+          </div>
+          <div style="margin-top: 3rem;">
+            <a href="Grayson_Coleman_Resume.pdf" target="_blank" class="btn">Download Resume</a>
+          </div>
+        </div>
+        <form action="https://formspree.io/f/mblkkzkn" method="POST" class="contact-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required placeholder="First and Last" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="your@email.com" />
+          </div>
+          <div class="form-group">
+            <label for="organization">Organization</label>
+            <input type="organization" id="organization" name="organization" required placeholder="Who is my new partner?" />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project..." style="resize: none;"></textarea>
+          </div>
+          <button type="submit" class="btn btn--block" style="width: 100%;">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Grayson Coleman. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Modal Overlay -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal()">&times;</button>
+      <div class="modal-header">
+        <h3 class="modal-title" id="modalTitle">Project Title</h3>
+      </div>
+      <div class="modal-description" id="modalDescription">
+        Project description goes here...
+      </div>
+      <div class="modal-details" id="modalDetails">
+        <!-- Details will be populated by JavaScript -->
+      </div>
+      <div style="text-align: center; margin-top: 2rem;">
+        <div id="modalLinks">
+          <!-- Links will be populated by JavaScript -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
