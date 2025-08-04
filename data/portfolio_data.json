@@ -10,7 +10,7 @@
         "Protein Purification", "PCR", "Gel Electrophoresis", "Blotting Techniques", "Cell Sorting", "Cryopreservation"
       ],
       "links": [
-        { "text": "Thesis", "url": "assets/documents/GraysonColeman_Fall23_Senior_Honors_Thesis.pdf", "type": "btn" },
+        { "text": "Thesis", "url": "/assets/documents/GraysonColeman_Fall23_Senior_Honors_Thesis.pdf", "type": "btn" },
         { "text": "Presentation", "url": "https://1drv.ms/p/c/2e63c6018bb49302/EdTMWhgO0G9GqMcJP2Pn4XIB_k-x27boM5L2E43G7yPHkA?e=68J2lE", "type": "btn" }
       ],
       "stats": [
