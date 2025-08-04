@@ -151,10 +151,10 @@ function createIndicator(index) {
  * =============================
  */
 
-const typewriterTitles = [
-  "A Self-Taught Python Developer", 
+const typewriterTitles = [ 
   "An Experienced Translational Bench Researcher",
   "A Human-Centered Healthcare Professional",
+  "A Self-Taught Python Developer",
   "A Science Communicator and Educator",
   "A Champion for Accessible Healthcare",
   "A Proven Leader and Team Player",
