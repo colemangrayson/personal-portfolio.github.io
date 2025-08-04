@@ -126,6 +126,12 @@ body {
   font-size: var(--font-size-base);
 }
 
+/* safest: apply to both html and body */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 /* ===========================
    ANIMATED BACKGROUND
    =========================== */
