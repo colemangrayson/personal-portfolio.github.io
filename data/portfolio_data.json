@@ -3,12 +3,11 @@
     {
       "id": 0,
       "title": "Translational Research",
-      "description": "Under Dr. Ronald Falk at the UNC Kidney Center, I conducted bench research on immune-mediated kidney diseases, with a strong focus on T cell biology. My investigations into the SARS-CoV-2 vaccine's efficacy in immunosuppressed patients bridged the lab and the clinic, directly impacting patient care. This experience has transformed my commitment to medicine, desiring not only to be a practitioner of medicine as a physician but a contributor to medicine as a scientist.",
+      "description": "Under Dr. Ronald Falk at the UNC Kidney Center, I conducted bench research on immune-mediated kidney diseases, with a strong focus on T cell biology. My investigations into the SARS-CoV-2 vaccine’s efficacy in immunosuppressed patients bridged the lab and the clinic, directly impacting patient care. This experience has transformed my commitment to medicine, desiring not only to be a practitioner of medicine as a physician but a contributor to medicine as a scientist.",
       "techTags": [
         "T Cells", "B Cells", "Good Clinical Practice", "Human Subjects Research", "Flow Cytometry",
-        "Immunoassays", "Blood Processing", "DNA/RNA Extraction", "Protein Purification", "REDCap",
-        "EPIC", "PCR", "Gel Electrophoresis", "Blotting Techniques", "Cell Culture",
-        "Mouse Models", "Cell Sorting", "Cryopreservation"
+        "Immunoassays", "EPIC", "REDCap", "Cell Culture", "Mouse Models", "Blood Processing", "DNA/RNA Extraction", 
+        "Protein Purification", "PCR", "Gel Electrophoresis", "Blotting Techniques", "Cell Sorting", "Cryopreservation"
       ],
       "links": [
         { "text": "Thesis", "url": "GraysonColeman_Fall23_Senior_Honors_Thesis.pdf", "type": "btn" },
@@ -17,7 +16,7 @@
       "stats": [
         { "number": "2.5", "label": "Years of Experience" },
         { "number": "7+", "label": "Project Contributions" },
-        { "number": "8+", "label": "Bench Techniques Mastered" },
+        { "number": "12+", "label": "Bench Techniques Practiced" },
         { "number": "2", "label": "Certificates in Biomedical Research" }
       ],
       "details": {
@@ -39,6 +38,11 @@
         "Murine Model Experiments": [
           "Extracted splenocytes from whole mouse spleens",
           "Reconstituted suspensions for reintroduction into mouse models"
+        ],
+        "Collaborative and Supportive Roles on Other Projects": [
+          "Performed PCR, ELISAs, gel electrophoresis, and various blots",
+          "Processed stool samples for microbiome study and blood samples for various ANCA-related studies",
+          "Extracted DNA/RNA for downstream analyses"
         ]
       }
     },
