@@ -196,7 +196,7 @@
     {
       "id": 4,
       "title": "Application Development",
-      "description": "I built my first app as a junior in high school for a computer science elective in Swift modeling the "pong” game on GamePigeon. Eight years later, I have developed well over a dozen applications in half-a-dozen different languages. From an iOS expiration date tracker to an automated secret Santa algorithm, the freedom of imagination and the zero-cost to produce has made programming not just a hobby but a means of personal creation.",
+      "description": """I built my first app as a junior in high school for a computer science elective in Swift modeling the "pong" game on GamePigeon. Eight years later, I have developed well over a dozen applications in half-a-dozen different languages. From an iOS expiration date tracker to an automated secret Santa algorithm, the freedom of imagination and the zero-cost to produce has made programming not just a hobby but a means of personal creation.""",
       "techTags": [
         "Python", "SQL", "HTML/CSS/JS", "Swift", "iOS Development", "Cloud Computing", "PostgreSQL", 
         "Full Stack Development", "Back-End Architecture", "Front-End Architecture", "Web Development", "UI/UX Design", "VS Code", "Git", "Automation",
@@ -258,37 +258,37 @@
           "Health Insurance Marketplace",
           "Medicare",
           "Medicaid",
-          "Hospital-Specific Financial Assistance”,
-          "Private Insurance (Aetna, Humana, Cigna, etc.)”,
-          "Dental Insurance”,
-          "Eye Coverage”,
-          "COBRA”,
-          "TRICARE”,
-          "Supplemental Nutrition Assistance Program”,
-          "Social Security”,
-          "Basics of NC and US Citizenship and Residency”,
-          "Prescription Assistance”,
-          "Free and Sliding-Scale Clinics”,
-          "Children’s Health Insurance Program”,
-          "Employer-sponsored health insurance”
+          "Hospital-Specific Financial Assistance",
+          "Private Insurance (Aetna, Humana, Cigna, etc.)",
+          "Dental Insurance",
+          "Eye Coverage",
+          "COBRA",
+          "TRICARE",
+          "Supplemental Nutrition Assistance Program",
+          "Social Security",
+          "Basics of NC and US Citizenship and Residency",
+          "Prescription Assistance",
+          "Free and Sliding-Scale Clinics",
+          "Children’s Health Insurance Program",
+          "Employer-sponsored health insurance"
         ],
         "Interests in Public Health": [
-          "Social determinants of health and their impact on patient outcomes”,
-          "Epidemiology of both infectious and chronic diseases”,
-          "Delivering care in under-resourced medical settings”,
-          "Streamlining patient navigation through complex healthcare systems”,
-          "Health policy development and advocacy for equitable access”,
-          "Integrating public health principles into clinical medicine”,
-          "Closing gaps and reducing inequities in the healthcare system”,
-          "Increasing global access to modern medicine”,
-          "Integrating traditional and Eastern medicine into modern medical practice”
+          "Social determinants of health and their impact on patient outcomes",
+          "Epidemiology of both infectious and chronic diseases",
+          "Delivering care in under-resourced medical settings",
+          "Streamlining patient navigation through complex healthcare systems",
+          "Health policy development and advocacy for equitable access",
+          "Integrating public health principles into clinical medicine",
+          "Closing gaps and reducing inequities in the healthcare system",
+          "Increasing global access to modern medicine",
+          "Integrating traditional and Eastern medicine into modern medical practice"
         ]
       }
     },
     {
       "id": 6,
       "title": "Community Service",
-      "description": "My father is an Eagle Scout meaning I grew up with the Sir Robert Baden-Powell quote "try to leave this world a little better than you found it.” While many of my father’s sayings made me laugh (or roll my eyes), this one has shaped how I live my life. For more than a decade, I’ve committed myself to volunteering in different capacities, making service not just an activity but a core part of how I spend my free time and contribute to my community.",
+      "description": """My father is an Eagle Scout meaning I grew up with the Sir Robert Baden-Powell quote "try to leave this world a little better than you found it." While many of my father’s sayings made me laugh (or roll my eyes), this one has shaped how I live my life. For more than a decade, I’ve committed myself to volunteering in different capacities, making service not just an activity but a core part of how I spend my free time and contribute to my community.""",
       "techTags": [
         "Ethical Service", "Community Outreach", "Service Learning", "Leadership", "Community Engagement",
         "Mentorship", "Nonprofit Work", "Volunteerism", "Effective Service", "Team Building"
