@@ -293,9 +293,7 @@
         "Ethical Service", "Community Outreach", "Service Learning", "Leadership", "Community Engagement",
         "Mentorship", "Nonprofit Work", "Volunteerism", "Effective Service", "Team Building"
       ],
-      "links": [
-        { "text": "SHAC", "url": "https://www.med.unc.edu/shac", "type": "btn" }
-      ],
+      "links": [],
       "stats": [
         { "number": "5+", "label": "Organizations" },
         { "number": "10+", "label": "Years of Experience" },
