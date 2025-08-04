@@ -461,6 +461,16 @@ button.btn {
   50% { opacity: 0.3; }
 }
 
+.about-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  object-position: center; 
+  position: relative;
+  z-index: 1;
+  border-radius: var(--radius-2xl);
+}
+
 .stats {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
