@@ -294,7 +294,7 @@
         "Mentorship", "Nonprofit Work", "Volunteerism", "Effective Service", "Team Building"
       ],
       "links": [
-        
+        { "text": "Aftermath", "url": "#", "type": "btn-coming-soon" }
       ],
       "stats": [
         { "number": "5+", "label": "Organizations" },
