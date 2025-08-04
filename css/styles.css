@@ -161,6 +161,50 @@ body {
 }
 
 /* ===========================
+   VIEWPORT SETTINGS
+   =========================== */
+
+/* Disable horizontal scrolling */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* Prevent zoom on mobile devices */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  touch-action: manipulation;
+}
+
+/* Disable zoom on form inputs (common cause of unwanted zoom) */
+input, select, textarea {
+  font-size: 16px; /* Prevents zoom on iOS when font-size is less than 16px */
+}
+
+/* Ensure all containers respect the viewport width */
+* {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Specifically for your carousel/gallery */
+.projects-carousel {
+  overflow-x: auto; /* Allow scrolling within the carousel */
+  overflow-y: hidden;
+}
+
+/* Hide scrollbars in the carousel while keeping functionality */
+.projects-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.projects-carousel {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ===========================
    NAVIGATION
    =========================== */
 
