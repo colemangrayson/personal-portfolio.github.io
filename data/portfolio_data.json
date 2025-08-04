@@ -153,34 +153,43 @@
     {
       "id": 3,
       "title": "Data Science, Machine Learning, and AI",
-      "description": "My interest in AI/ML was sparked during the generative AI boom of late 2022, when OpenAI rolled out GPT-3.5 to the public in the form of ChatGPT, reshaping how we think about knowledge and automation. Soon after, I immersed myself in the field and, as an intern at Syneos Health, built the prototype of an AI-augmented clinical trial protocol generator. The project gained recognition for its innovation, ultimately being featured in Wired.",
+      "description": "My interest in AI/ML was sparked during the generative AI boom of late 2022, when OpenAI rolled out GPT-3.5 to the public in the form of ChatGPT, reshaping how we think about knowledge and automation. Soon after, I immersed myself in the field and, as an intern at Syneos Health, built the prototype of an AI-augmented clinical trial protocol generator. The project gained recognition for its innovation, ultimately being featured in <i>Wired.</i>",
       "techTags": [
         "AI/ML Foundations", "ML Algorithm Implementation", "Data Governance and Management", "Natural Language Processing", "Large Language Models",
-        "Deep Learning Architectures", "OpenAI/GPT", "LLaMa", "Vector Embedding", "Python and AI/ML Packages",
-        "Retrieval Automated Generation", "API Integrations", "Azure", "Cloud Computing and Deployment", "Data Visualization",
-        "Responsible AI Practices", "Documentation", "Data Cleaning & Preprocessing", "Data Warehousing", "Database Querying"
+        "Deep Learning Architectures", "Cloud Computing and Deployment", "API Integrations", "Python and AI/ML Packages", "Responsible AI Practices",
+        "Retrieval Automated Generation", "Azure", "Vector Embedding", "Data Visualization", "OpenAI/GPT", "LLaMa", 
+        "Documentation", "Data Cleaning & Preprocessing", "Data Warehousing", "Database Querying"
       ],
       "links": [
-        { "text": "Wired Article", "url": "https://www.wired.com/sponsored/story/how-syneos-health-is-revolutionizing-the-clinical-development-of-lifesaving-medicine/", "type": "btn" }
+        { "text": "<i>Wired</i>", "url": "https://www.wired.com/sponsored/story/how-syneos-health-is-revolutionizing-the-clinical-development-of-lifesaving-medicine/", "type": "btn" }
       ],
       "stats": [
-        { "number": "15+", "label": "AI Models Implemented" },
-        { "number": "50+", "label": "Clinical Protocols Analyzed" },
-        { "number": "95%", "label": "Accuracy Rate Achieved" },
-        { "number": "1", "label": "Wired Feature" }
+        { "number": "4+", "label": "AI Tools Built" },
+        { "number": "3", "label": "LLMs Implemented" },
+        { "number": "10+", "label": "Familiar Packages" }
       ],
       "details": {
-        "AI Protocol Generator": [
-          "Developed prototype using advanced NLP and machine learning techniques",
-          "Integrated multiple data sources to generate comprehensive clinical trial protocols",
-          "Implemented retrieval-augmented generation for improved accuracy",
-          "Achieved significant time savings in protocol development process"
-        ],
-        "Technical Implementation": [
-          "Built on Azure cloud infrastructure for scalability",
-          "Utilized OpenAI GPT models with custom fine-tuning",
-          "Implemented vector databases for efficient information retrieval",
-          "Created user-friendly interfaces for non-technical stakeholders"
+        "Packages, Libraries, and Tools": [
+          "LangChain",
+          "Hugging Face",
+          "FAISS",
+          "Pandas",
+          "Seaborn",
+          "Matplotlib",
+          "NumPy",
+          "OpenAI API",
+          "GPT-Based Models",
+          "LLaMa",
+          "BERT",
+          "PyTorch",
+          "Scikit-Learn",
+          "spaCy",
+          "nltk",
+          "Plotly",
+          "Pinecone",
+          "SQLAlchemy",
+          "psycopg2",
+          "Azure"
         ]
       }
     },
