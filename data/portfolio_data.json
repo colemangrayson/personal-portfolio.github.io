@@ -55,9 +55,9 @@
         "Audience Adaptability", "Scientific Writing", "Clarity and Conciseness", "Microsoft Office", "Public Speaking"
       ],
       "links": [
-        { "text": "Emotional Guts", "url": "#", "type": "btn" },
-        { "text": "The Fight to Cure Cancer", "url": "#", "type": "btn" },
-        { "text": "Aftermath", "url": "#", "type": "btn" }
+        { "text": "Emotional Guts", "url": "#", "type": "btn-coming-soon" },
+        { "text": "The Fight to Cure Cancer", "url": "#", "type": "btn-coming-soon" },
+        { "text": "Aftermath", "url": "#", "type": "btn-coming-soon" }
       ],
       "stats": [
         { "number": "1.5", "label": "Years of Writing Experience" },
@@ -153,7 +153,7 @@
     {
       "id": 3,
       "title": "Data Science, Machine Learning, and AI",
-      "description": "My interest in AI/ML was sparked during the generative AI boom of late 2022, when OpenAI rolled out GPT-3.5 to the public in the form of ChatGPT, reshaping how we think about knowledge and automation. Soon after, I immersed myself in the field and, as an intern at Syneos Health, built the prototype of an AI-augmented clinical trial protocol generator. The project gained recognition for its innovation, ultimately being featured in <i>Wired.</i>",
+      "description": "My interest in AI/ML was sparked during the generative AI boom of late 2022, when OpenAI rolled out GPT-3.5 to the public in the form of ChatGPT, reshaping how we think about knowledge and automation. Soon after, I immersed myself in the field and, as an intern at Syneos Health, built the prototype of an AI-augmented clinical trial protocol generator. The project gained recognition for its innovation, ultimately being featured in Wired.",
       "techTags": [
         "AI/ML Foundations", "ML Algorithm Implementation", "Data Governance and Management", "Natural Language Processing", "Large Language Models",
         "Deep Learning Architectures", "Cloud Computing and Deployment", "API Integrations", "Python and AI/ML Packages", "Responsible AI Practices",
@@ -161,7 +161,7 @@
         "Documentation", "Data Cleaning & Preprocessing", "Data Warehousing", "Database Querying"
       ],
       "links": [
-        { "text": "<i>Wired</i>", "url": "https://www.wired.com/sponsored/story/how-syneos-health-is-revolutionizing-the-clinical-development-of-lifesaving-medicine/", "type": "btn" }
+        { "text": "Wired", "url": "https://www.wired.com/sponsored/story/how-syneos-health-is-revolutionizing-the-clinical-development-of-lifesaving-medicine/", "type": "btn" }
       ],
       "stats": [
         { "number": "4+", "label": "AI Tools Built" },
@@ -196,99 +196,126 @@
     {
       "id": 4,
       "title": "Application Development",
-      "description": "I built my first app as a junior in high school for a computer science elective in Swift modeling the \"pong\" game on GamePigeon. Eight years later, I have developed well over a dozen applications in half-a-dozen different languages. From an iOS expiration date tracker to an automated secret Santa algorithm, the freedom of imagination and the zero-cost to produce has made programming not just a hobby but a means of personal creation.",
+      "description": "I built my first app as a junior in high school for a computer science elective in Swift modeling the “pong” game on GamePigeon. Eight years later, I have developed well over a dozen applications in half-a-dozen different languages. From an iOS expiration date tracker to an automated secret Santa algorithm, the freedom of imagination and the zero-cost to produce has made programming not just a hobby but a means of personal creation.",
       "techTags": [
-        "Python", "SQL", "HTML/CSS/JS", "Swift", "VS Code",
-        "Git", "Cloud Computing", "PostgreSQL", "Web Development", "UI/UX Design",
-        "Back-End Architecture", "Front-End Architecture", "Full Stack Development", "iOS Development", "Automation",
+        "Python", "SQL", "HTML/CSS/JS", "Swift", "iOS Development", "Cloud Computing", "PostgreSQL", 
+        "Full Stack Development", "Back-End Architecture", "Front-End Architecture", "Web Development", "UI/UX Design", "VS Code", "Git", "Automation",
         "Xcode", "Asynchronous Programming", "Web Scraping"
       ],
       "links": [
         { "text": "Coming Soon", "url": "", "type": "btn-coming-soon" }
       ],
       "stats": [
-        { "number": "15+", "label": "Applications Built" },
-        { "number": "6", "label": "Programming Languages" },
         { "number": "8", "label": "Years of Experience" },
-        { "number": "100%", "label": "Project Completion Rate" }
+        { "number": "6", "label": "Programming Languages" },
+        { "number": "12+", "label": "Applications Built" },
+        { "number": "15+", "label": "Practical Skills" }
       ],
       "details": {
-        "Mobile Applications": [
-          "iOS expiration date tracker with push notifications",
-          "GamePigeon-style pong game recreation",
-          "Personal productivity and organization apps",
-          "Data visualization and analysis tools"
+        "Packages, Libraries, and Tools": [
+          "Beautiful Soup",
+          "Selenium",
+          "Asyncio",
+          "SQLAlchemy",
+          "Regex"
         ],
-        "Web Applications": [
-          "Full-stack web applications with modern frameworks",
-          "Database-driven applications with complex queries",
-          "Automated workflow solutions",
-          "API integrations and microservices architecture"
+        "Capabilities": [
+          "Web Scrapping",
+          "API Utilization",
+          "Data Conversion Between Formats",
+          "Web Development and UI/UX Design",
+          "Automation and Scripting",
+          "Database Design and Querying",
+          "Data Cleaning and Preprocessing",
+          "Front-End Development",
+          "Back-End Development",
+          "Version Control and Collaboration",
+          "Mobile App Development",
+          "Security Best Practices in Development"
         ]
       }
     },
     {
       "id": 5,
-      "title": "Public Health, Healthcare Accessibility, and Health Equity",
+      "title": "Public Health, Health Access, and Health Equity",
       "description": "Wednesday nights from 6PM until 12AM, I would assist individuals in my community receive health insurance and health coverage at a clinic down the road from my university. Beyond clinic hours, I often fielded calls from patients throughout the week, guiding them in transitioning to long-term, stable care solutions. This role sat at the intersection of the social and medical, revealing to me the complexities of the US healthcare system and empowering me to leverage my understanding to assist others.",
       "techTags": [
-        "Health Insurance Marketplace", "Coordinating Care", "Medicaid", "Medicare", "Health Insurance",
-        "Health Coverage", "Federal Programs", "Conversational Spanish", "Health Equity", "Private Health Insurance",
-        "Dental/Eye Insurance", "Drug Assistance", "Auxiliary Health Services"
+        "Health Insurance Marketplace", "Coordinating Care", "Drug Assistance", "Auxiliary Health Services",
+        "Federal Programs", "Conversational Spanish", "Private Health Insurance", "Dental/Eye Insurance", 
+        "Medicaid", "Medicare", "Health Coverage", "Health Insurance", "Fostering Health Equity"
       ],
       "links": [
         { "text": "SHAC", "url": "https://www.med.unc.edu/shac", "type": "btn" }
       ],
       "stats": [
         { "number": "500+", "label": "Individuals Assisted" },
-        { "number": "200+", "label": "Insurance Applications" },
-        { "number": "50+", "label": "Weekly Hours Volunteered" },
-        { "number": "2", "label": "Years of Service" }
+        { "number": "7+", "label": "Health Coverage/Insurance Options" },
+        { "number": "1.5", "label": "Years of Experience" },
+        { "number": "12+", "label": "Hours Per Week" }
       ],
       "details": {
-        "Insurance Navigation": [
-          "Assisted with Health Insurance Marketplace applications",
-          "Guided patients through Medicaid and Medicare enrollment",
-          "Helped coordinate transitions between different coverage types",
-          "Provided bilingual support for Spanish-speaking patients"
+        "Frameworks Navigated": [
+          “Health Insurance Marketplace”,
+          “Medicare”,
+          “Medicaid “,
+          “Hospital-Specific Financial Assistance”,
+          “Private Insurance (Aetna, Humana, Cigna, etc.)”,
+          “Dental Insurance”,
+          “Eye Coverage”,
+          “COBRA”,
+          “TRICARE”,
+          “Supplemental Nutrition Assistance Program”,
+          “Social Security”,
+          “Basics of NC and US Citizenship and Residency”,
+          “Prescription Assistance”,
+          “Free and Sliding-Scale Clinics”,
+          “Children’s Health Insurance Program”,
+          “Employer-sponsored health insurance”
         ],
-        "Care Coordination": [
-          "Connected patients with appropriate healthcare providers",
-          "Assisted with prescription drug assistance programs",
-          "Coordinated dental and vision care coverage",
-          "Provided follow-up support for ongoing healthcare needs"
+        "Interests in Public Health": [
+          “Social determinants of health and their impact on patient outcomes”,
+          “Epidemiology of both infectious and chronic diseases”,
+          “Delivering care in under-resourced medical settings”,
+          “Streamlining patient navigation through complex healthcare systems”,
+          “Health policy development and advocacy for equitable access”,
+          “Integrating public health principles into clinical medicine”,
+          “Closing gaps and reducing inequities in the healthcare system”,
+          “Increasing global access to modern medicine”,
+          “Integrating traditional and Eastern medicine into modern medical practice”
         ]
       }
     },
     {
       "id": 6,
       "title": "Community Service",
-      "description": "My father is an Eagle Scout meaning I grew up with the Sir Robert Baden-Powell quote \"try to leave this world a little better than you found it.\" While many of my father's sayings made me laugh (or roll my eyes), this one has shaped how I live my life. For more than a decade, I've committed myself to volunteering in different capacities, making service not just an activity but a core part of how I spend my free time and contribute to my community.",
+      "description": "My father is an Eagle Scout meaning I grew up with the Sir Robert Baden-Powell quote “try to leave this world a little better than you found it.” While many of my father’s sayings made me laugh (or roll my eyes), this one has shaped how I live my life. For more than a decade, I’ve committed myself to volunteering in different capacities, making service not just an activity but a core part of how I spend my free time and contribute to my community.",
       "techTags": [
         "Ethical Service", "Community Outreach", "Service Learning", "Leadership", "Community Engagement",
         "Mentorship", "Nonprofit Work", "Volunteerism", "Effective Service", "Team Building"
       ],
       "links": [
-        { "text": "Coming Soon", "url": "", "type": "btn-coming-soon" }
+        
       ],
       "stats": [
-        { "number": "1000+", "label": "Service Hours" },
-        { "number": "10+", "label": "Organizations Served" },
-        { "number": "50+", "label": "People Mentored" },
-        { "number": "10", "label": "Years of Service" }
+        { "number": "5+", "label": "Organizations" },
+        { "number": "10+", "label": "Years of Experience" },
+        { "number": "7+", "label": "Communities Impacted" },
+        { "number": "8+", "label": "Projects" }
       ],
       "details": {
-        "Leadership Roles": [
-          "Led volunteer teams for community service projects",
-          "Organized fundraising events for local nonprofits",
-          "Mentored youth in educational and personal development",
-          "Coordinated outreach programs for underserved populations"
+        "Volunteer Track Record": [
+          "Special Olympics — Supported young athletes, fostering inclusion and empowerment through sport across fall, winter, and spring seasons",
+          "UNC Pediatric Playroom — Engaged young patients in play-based learning and activities to ease hospital stays",
+          "TABLE — Helped provide healthy meals to families facing food insecurity in the Chapel Hill community",
+          "K4C Soccer Club — Mentored youth athletes, teaching teamwork, sportsmanship, and resilience",
+          "Habitat for Humanity — Contributed to home-building projects to promote affordable housing"
         ],
-        "Service Areas": [
-          "Education and tutoring programs",
-          "Healthcare access and support",
-          "Environmental conservation projects",
-          "Community development initiatives"
+        "Skills Learned & Impact Made": [
+          "Ethical service through participation and active listening",
+          "Community advocacy and engagement",
+          "Cross-cultural communication and empathy",
+          "Leadership and collaboration within service teams",
+          "Time management while balancing service with academics/professional responsibilities"
         ]
       }
     },
@@ -297,32 +324,28 @@
       "title": "Entrepreneurship",
       "description": "I helped my father build and launch Six Components, a consulting firm that enables healthcare solution companies to leverage big data, implement AI, and become digital-first enterprises. I developed the brand identity, designed the website, and co-created our client outreach strategy. With no roadmap and a constantly evolving set of challenges, I learned by doing — adapting quickly, solving problems creatively, and thinking strategically. This hands-on experience in fast-paced, solution-driven work inspired me to pursue my own entrepreneurial ventures, which I am now developing to transform how medicine meets a changing world.",
       "techTags": [
-        "Microsoft Office", "Workflow", "Automation", "Wordpress", "Notion",
-        "Custom AI Suites", "Anthropic/Claude", "Perplexity", "Midjourney", "Canva",
-        "Brand Design", "Social Media", "Search Engine Optimization", "Domain Hosting and Management", "Website Development",
-        "Client Relationship Management", "Prompt Engineering", "Business Operations", "Project Management", "Content Creation"
+        "Microsoft Office", "Brand Design", "Social Media", "Workflow", "Automation", "Wordpress", "Notion",
+        "Custom AI Suites", "Canva","Business Operations", "Anthropic/Claude", "Perplexity", "Midjourney",
+        "Search Engine Optimization", "Domain Hosting and Management", "Website Development",
+        "Client Relationship Management", "Prompt Engineering", "Project Management", "Content Creation"
       ],
       "links": [
         { "text": "Six Components", "url": "https://sixcomponents.com", "type": "btn" }
       ],
       "stats": [
-        { "number": "1", "label": "Company Co-Founded" },
-        { "number": "15+", "label": "Clients Served" },
-        { "number": "50+", "label": "AI Tools Implemented" },
-        { "number": "3", "label": "Years of Growth" }
+        { "number": "1", "label": "Successful Startup" },
+        { "number": "2", "label": "Projects Under Development" }
       ],
       "details": {
-        "Business Development": [
-          "Co-founded and developed Six Components from concept to execution",
-          "Created comprehensive brand identity and marketing strategy",
-          "Developed client acquisition and retention strategies",
-          "Managed business operations and project delivery"
-        ],
-        "Technical Implementation": [
-          "Built company website with modern design and functionality",
-          "Implemented custom AI solutions for healthcare clients",
-          "Developed automated workflows for business processes",
-          "Created content management and client communication systems"
+        "Respomsibilities and Experience": [
+          "Created the company’s brand identity including logo design, color palette, and typography guidelines",
+          "Standardized branding guidelines for consistent use across all digital and print channels",
+          "Built a responsive, SEO-optimized website and designed a cohesive digital user experience",
+          "Established internal workflows and automations to streamline operations and improve efficiency",
+          "Implemented internal digital security and web presence",
+          "Oversaw administrative and logistical setup for company operations including company email systems, domain registration, cloud storage, and other administrative infrastructure",
+          "Drafted internal documentation for repeatable processes, best practices, and operational protocols",
+          "Developed a company content-creation workflow to increase public engagement and reach"
         ]
       }
     }
