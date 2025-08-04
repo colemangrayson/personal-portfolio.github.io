@@ -196,7 +196,7 @@
     {
       "id": 4,
       "title": "Application Development",
-      "description": '''I built my first app as a junior in high school for a computer science elective in Swift modeling the "pong" game on GamePigeon. Eight years later, I have developed well over a dozen applications in half-a-dozen different languages. From an iOS expiration date tracker to an automated secret Santa algorithm, the freedom of imagination and the zero-cost to produce has made programming not just a hobby but a means of personal creation.''',
+      "description": "I built my first app as a junior in high school for a computer science elective in Swift modeling the \"pong\" game on GamePigeon. Eight years later, I have developed well over a dozen applications in half-a-dozen different languages. From an iOS expiration date tracker to an automated secret Santa algorithm, the freedom of imagination and the zero-cost to produce has made programming not just a hobby but a means of personal creation.",
       "techTags": [
         "Python", "SQL", "HTML/CSS/JS", "Swift", "iOS Development", "Cloud Computing", "PostgreSQL", 
         "Full Stack Development", "Back-End Architecture", "Front-End Architecture", "Web Development", "UI/UX Design", "VS Code", "Git", "Automation",
@@ -288,7 +288,7 @@
     {
       "id": 6,
       "title": "Community Service",
-      "description": '''My father is an Eagle Scout meaning I grew up with the Sir Robert Baden-Powell quote "try to leave this world a little better than you found it." While many of my father’s sayings made me laugh (or roll my eyes), this one has shaped how I live my life. For more than a decade, I’ve committed myself to volunteering in different capacities, making service not just an activity but a core part of how I spend my free time and contribute to my community.''',
+      "description": "My father is an Eagle Scout meaning I grew up with the Sir Robert Baden-Powell quote \"try to leave this world a little better than you found it.\" While many of my father’s sayings made me laugh (or roll my eyes), this one has shaped how I live my life. For more than a decade, I’ve committed myself to volunteering in different capacities, making service not just an activity but a core part of how I spend my free time and contribute to my community.",
       "techTags": [
         "Ethical Service", "Community Outreach", "Service Learning", "Leadership", "Community Engagement",
         "Mentorship", "Nonprofit Work", "Volunteerism", "Effective Service", "Team Building"
