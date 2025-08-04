@@ -55,9 +55,9 @@
         "Audience Adaptability", "Scientific Writing", "Clarity and Conciseness", "Microsoft Office", "Public Speaking"
       ],
       "links": [
-        { "text": "Emotional Guts", "url": "#", "type": "btn-coming-soon" },
-        { "text": "The Fight to Cure Cancer", "url": "#", "type": "btn-coming-soon" },
-        { "text": "Aftermath", "url": "#", "type": "btn-coming-soon" }
+        { "text": "Emotional Guts", "url": "", "type": "btn-coming-soon" },
+        { "text": "The Fight to Cure Cancer", "url": "", "type": "btn-coming-soon" },
+        { "text": "Aftermath", "url": "", "type": "btn-coming-soon" }
       ],
       "stats": [
         { "number": "1.5", "label": "Years of Writing Experience" },
@@ -323,7 +323,7 @@
       "description": "I helped my father build and launch Six Components, a consulting firm that enables healthcare solution companies to leverage big data, implement AI, and become digital-first enterprises. I developed the brand identity, designed the website, and co-created our client outreach strategy. With no roadmap and a constantly evolving set of challenges, I learned by doing — adapting quickly, solving problems creatively, and thinking strategically. This hands-on experience in fast-paced, solution-driven work inspired me to pursue my own entrepreneurial ventures, which I am now developing to transform how medicine meets a changing world.",
       "techTags": [
         "Microsoft Office", "Brand Design", "Social Media", "Workflow", "Automation", "Wordpress", "Notion",
-        "Custom AI Suites", "Canva","Business Operations", "Anthropic/Claude", "Perplexity", "Midjourney",
+        "Custom AI Suites", "Canva", "Business Operations", "Anthropic/Claude", "Perplexity", "Midjourney",
         "Search Engine Optimization", "Domain Hosting and Management", "Website Development",
         "Client Relationship Management", "Prompt Engineering", "Project Management", "Content Creation"
       ],
