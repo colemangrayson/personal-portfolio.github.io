@@ -438,6 +438,7 @@ button.btn {
 }
 
 .about-visual {
+  opacity: 0
   position: relative;
   height: 100%; /* Fill parent row height */
   align-self: stretch;
@@ -461,12 +462,12 @@ button.btn {
   background: var(--gradient-accent);
   opacity: 0.1;
   animation: pulse 3s ease-in-out infinite;
-} */
+}
 
 @keyframes pulse {
   0%, 100% { opacity: 0.1; }
   50% { opacity: 0.3; }
-}
+} */
 
 .about-image {
   width: 100%;
