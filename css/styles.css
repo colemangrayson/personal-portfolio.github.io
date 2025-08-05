@@ -437,10 +437,6 @@ button.btn {
   color: var(--text-secondary);
 }
 
-.about-visual {
-  opacity: 0;
-}
-
 .about-image {
   width: 100%;
   height: 100%;
