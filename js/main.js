@@ -162,9 +162,9 @@ const typewriterTitles = [
   "An AI Enthusiast and Engineer",
   "An Innovator with End-to-End Experience in the US Healthcare System",
   "A Quick Study, Self-Directed Learner, and Perseverant Collaborator",
-  "A Lifelong Contributor and Learner",
   "A Passionate Scientist in the Fields of Immunology, Infectious Disease, and Cancer",
-  "A Prolific Reader, Writer, and Content Creator"
+  "A Prolific Reader, Writer, and Content Creator",
+  "A Lifelong Contributor and Learner"
 ];
 
 let titleIndex = 0;
