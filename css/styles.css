@@ -440,6 +440,7 @@ button.btn {
 .about-visual {
   position: relative;
   height: 100%; /* Fill parent row height */
+  align-self: stretch;
   background: var(--background-glass);
   border-radius: var(--radius-2xl);
   backdrop-filter: blur(20px);
