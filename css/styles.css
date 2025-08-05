@@ -442,10 +442,10 @@ button.btn {
   position: relative;
   height: 100%; /* Fill parent row height */
   align-self: stretch;
-  background: var(--background-glass);
+/*   background: var(--background-glass);
   border-radius: var(--radius-2xl);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1); */
   display: flex;
   align-items: center;
   justify-content: center;
