@@ -438,36 +438,8 @@ button.btn {
 }
 
 .about-visual {
-  opacity: 0;
-  position: relative;
-  height: 100%; /* Fill parent row height */
-  align-self: stretch;
-/*   background: var(--background-glass);
-  border-radius: var(--radius-2xl);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.1); */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+  display: none;
 }
-
-/* .about-visual::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--gradient-accent);
-  opacity: 0.1;
-  animation: pulse 3s ease-in-out infinite;
-}
-
-@keyframes pulse {
-  0%, 100% { opacity: 0.1; }
-  50% { opacity: 0.3; }
-} */
 
 .about-image {
   width: 100%;
