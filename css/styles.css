@@ -438,7 +438,7 @@ button.btn {
 }
 
 .about-visual {
-  opacity: 0
+  opacity: 0;
   position: relative;
   height: 100%; /* Fill parent row height */
   align-self: stretch;
