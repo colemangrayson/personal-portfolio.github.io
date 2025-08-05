@@ -438,7 +438,7 @@ button.btn {
 }
 
 .about-visual {
-  display: none;
+  opacity: 0;
 }
 
 .about-image {
