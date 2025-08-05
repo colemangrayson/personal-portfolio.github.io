@@ -3,7 +3,7 @@
     {
       "id": 0,
       "title": "Translational Research",
-      "description": "Under Dr. Ronald Falk at the UNC Kidney Center, I conducted bench research on immune-mediated kidney diseases, with a strong focus on T cell biology. My investigations into the SARS-CoV-2 vaccine’s efficacy in immunosuppressed patients bridged the lab and the clinic, directly impacting patient care. This experience has transformed my commitment to medicine, desiring not only to be a practitioner of medicine as a physician but a contributor to medicine as a scientist.",
+      "description": "Under Dr. Ronald Falk at the UNC Kidney Center, I conducted bench research on immune-mediated kidney diseases, with a strong focus on T cell biology. My investigations into the SARS-CoV-2 vaccine’s efficacy in immunosuppressed patients bridged the lab and the clinic, aiming to directly inform patient care. This experience has transformed my commitment to medicine, desiring not only to be a practitioner of medicine as a physician but a contributor to medicine as a scientist.",
       "techTags": [
         "T Cells", "B Cells", "Good Clinical Practice", "Human Subjects Research", "Flow Cytometry",
         "Immunoassays", "EPIC", "REDCap", "Cell Culture", "Mouse Models", "Blood Processing", "DNA/RNA Extraction", 
@@ -22,7 +22,7 @@
       "details": {
         "Efficacy of SARS-CoV-2 Vaccine in Immunosuppressed Patients": [
           "Processed blood samples and isolated PBMCs for immunological testing",
-          "Performed ELISpot assays and flow cytometry",
+          "Performed ELISpot assays and flow cytometry analyses",
           "Conducted advanced data analysis using statistical and machine learning methods",
           "Authored and defended my undergraduate honors thesis on this project"
         ],
@@ -49,7 +49,7 @@
     {
       "id": 1,
       "title": "Science Communication and Education",
-      "description": "Early in college, I saw how unnecessarily convoluted science communication was often made and, as public trust in science declined during the pandemic, I was driven to make scientific knowledge more accessible. This conviction led me to pursue both science writing and teaching as powerful tools to make knowledge accessible, engaging, and impactful.",
+      "description": "I began to realize early into my college career how unnecessarily convoluted science topics were often made and, as public trust in the scientific community declined during the pandemic, I was driven to make scientific knowledge more accessible. This conviction led me to pursue both scientific writing and instruction as powerful tools to make this knowledge clear, engaging, and impactful.",
       "techTags": [
         "Simplifying Complex Topics", "Active Learning Strategies", "Science Application", "Storytelling", "Editing",
         "Audience Adaptability", "Scientific Writing", "Clarity and Conciseness", "Microsoft Office", "Public Speaking"
@@ -67,7 +67,7 @@
       ],
       "details": {
         "Learning Assistant for UNC’s BIOL 252L": [
-          "Co-instructed three semesters of Human Anatomy and Physiology Laboratory",
+          "Co-instructed three semesters of Human Anatomy and Physiology Laboratory alongside a TA",
           "Led interactive 1-on-1 as well as group lab sessions",
           "Covered breakthrough research in accessible, engaging formats",
           "Designed review materials and practice questions to support student mastery of complex systems"
@@ -169,18 +169,13 @@
         { "number": "10+", "label": "Familiar Packages" }
       ],
       "details": {
-        "Packages, Libraries, and Tools": [
+        "Packages and Libraries": [
           "LangChain",
-          "Hugging Face",
           "FAISS",
           "Pandas",
           "Seaborn",
           "Matplotlib",
           "NumPy",
-          "OpenAI API",
-          "GPT-Based Models",
-          "LLaMa",
-          "BERT",
           "PyTorch",
           "Scikit-Learn",
           "spaCy",
@@ -188,8 +183,15 @@
           "Plotly",
           "Pinecone",
           "SQLAlchemy",
-          "psycopg2",
-          "Azure"
+          "psycopg2"
+        ],
+        "Ecosystems and Tools": [
+          "Azure",
+          "Hugging Face",
+          "OpenAI API",
+          "GPT-Based Models",
+          "LLaMa",
+          "BERT"
         ]
       }
     },
@@ -249,7 +251,7 @@
       ],
       "stats": [
         { "number": "500+", "label": "Individuals Assisted" },
-        { "number": "7+", "label": "Options Trained" },
+        { "number": "7+", "label": "Insurance and Coverage Options" },
         { "number": "1.5", "label": "Years of Experience" },
         { "number": "12+", "label": "Hours Per Week" }
       ],
