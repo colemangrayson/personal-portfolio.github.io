@@ -451,7 +451,7 @@ button.btn {
   overflow: hidden;
 }
 
-.about-visual::before {
+/* .about-visual::before {
   content: '';
   position: absolute;
   top: 0;
@@ -461,7 +461,7 @@ button.btn {
   background: var(--gradient-accent);
   opacity: 0.1;
   animation: pulse 3s ease-in-out infinite;
-}
+} */
 
 @keyframes pulse {
   0%, 100% { opacity: 0.1; }
