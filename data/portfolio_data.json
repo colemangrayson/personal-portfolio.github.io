@@ -157,7 +157,7 @@
       "techTags": [
         "AI/ML Foundations", "ML Algorithm Implementation", "Data Governance and Management", "Natural Language Processing", "Large Language Models",
         "Deep Learning Architectures", "Cloud Computing and Deployment", "API Integrations", "Python and AI/ML Packages", "Responsible AI Practices",
-        "Retrieval Automated Generation", "Azure", "Vector Embedding", "Data Visualization", "OpenAI/GPT", "LLaMa", 
+        "Exploratory Data Analysis", "Retrieval Automated Generation", "Azure", "Vector Embedding", "Data Visualization", "OpenAI/GPT", "LLaMa", 
         "Documentation", "Data Cleaning & Preprocessing", "Data Warehousing", "Database Querying"
       ],
       "links": [
@@ -201,7 +201,7 @@
       "description": "I built my first app as a junior in high school for a computer science elective in Swift modeling the \"pong\" game on GamePigeon. Eight years later, I have developed well over a dozen applications in half-a-dozen different languages. From an iOS expiration date tracker to an automated secret Santa algorithm, the freedom of imagination and the zero-cost to produce has made programming not just a hobby but a means of personal creation.",
       "techTags": [
         "Python", "SQL", "HTML/CSS/JS", "Swift", "iOS Development", "Cloud Computing", "PostgreSQL", 
-        "Full Stack Development", "Back-End Architecture", "Front-End Architecture", "Web Development", "UI/UX Design", "VS Code", "Git", "Automation",
+        "Full Stack Development", "Back-End Architecture", "Front-End Architecture", "Vibe Coding", "Web Development", "UI/UX Design", "VS Code", "Git", "Automation",
         "Xcode", "Asynchronous Programming", "Web Scraping"
       ],
       "links": [
